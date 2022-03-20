@@ -1,0 +1,24 @@
+{
+    "name": "express_auth_template",
+    "version": "1.0.0",
+    "main": "server.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "set NODE_ENV=dev&&node server.js",
+        "dev": "set NODE_ENV=dev&&nodemon server.js",
+        "seed-dev": "node ./config/db/seedDev.js"
+    },
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "express-mysql-session": "^2.1.7",
+        "express-session": "^1.17.2",
+        "mysql": "^2.18.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
