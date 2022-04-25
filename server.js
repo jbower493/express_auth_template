@@ -6,6 +6,9 @@ const { v4: uuidv4 } = require('uuid');
 require('dotenv').config();
 const cors = require('cors');
 
+// import auth controller
+const authController = require('./controllers/authController');
+
 // import routers
 const authRouter = require('./routes/auth.js');
 
@@ -55,6 +58,8 @@ app.use((req, res, next) => {
     }
     next();
 });
+
+app.use(authController.deserializeUser);
 
 // mount routers
 app.use('/api/auth', authRouter);
